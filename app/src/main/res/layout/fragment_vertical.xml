@@ -148,30 +148,12 @@
         android:layout_alignStart="@+id/text_address"
         android:layout_marginBottom="14dp" />
 
-    <TextView
-        android:id="@+id/selected"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/selected"
-        android:layout_above="@+id/edit_name"
-        android:layout_marginBottom="12dp" />
-
-    <TextView
-        android:id="@+id/select"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/select"
-        android:layout_alignTop="@+id/spinner"
-        android:layout_alignStart="@+id/text_name"
-        android:layout_alignBottom="@+id/spinner" />
-
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="wrap_content"
+        style="@style/editText"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/selected"
-        android:layout_alignEnd="@+id/edit_name"
-        android:layout_toEndOf="@+id/select" />
+
+        />
 
 
 </RelativeLayout>

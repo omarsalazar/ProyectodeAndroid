@@ -49,5 +49,13 @@
         android:layout_marginTop="15dp"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/edit_address" />
+    <TextView
+        android:id="@+id/usuario_tipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuario:"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/edit_email"
+        android:layout_alignStart="@+id/edit_email" />
 
 </RelativeLayout>

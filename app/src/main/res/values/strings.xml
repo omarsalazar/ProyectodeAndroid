@@ -10,12 +10,17 @@
     <string name="ok">uwu</string>
     <string name="clear">Clear</string>
     <!--Esto es del Spinner-->
-    <string name="select">Usuario: </string>
-    <string name="selected">Usuario seleccionado: </string>
-    <string name="action_settings">Settings</string>
     <string-array name="user">
+        <item>Selecciona un usuario</item>
         <item>Invitado</item>
         <item>Administrador</item>
         <item>Usuario Regular</item>
     </string-array>
+    <!--Esto es del menu-->
+    <string name="str_option1">Option1</string>
+    <string name="str_option2">Option2</string>
+    <string name="str_option3">Option3</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

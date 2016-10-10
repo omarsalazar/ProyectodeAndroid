@@ -1,7 +1,6 @@
 package com.example.lopsan.tareita1;
 
-import android.content.Context;
-import android.net.Uri;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -24,6 +23,8 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
+
 import java.util.Arrays;
 
 
@@ -38,9 +39,9 @@ public class verticalFragment extends Fragment implements OnItemSelectedListener
     Button clear;
     Button enviar;
 
-    TextView selected;
     Spinner spinner;
     String[] users;
+    String usuariopSelecctionado;
 
     public verticalFragment() {
         // Required empty public constructor
@@ -50,7 +51,7 @@ public class verticalFragment extends Fragment implements OnItemSelectedListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
+        setHasOptionsMenu(true);
         View view = inflater.inflate(R.layout.fragment_vertical, container, false);
         nombre = (EditText) view.findViewById(R.id.edit_name);
         direccion = (EditText) view.findViewById(R.id.edit_address);
@@ -61,13 +62,15 @@ public class verticalFragment extends Fragment implements OnItemSelectedListener
         clear = (Button) view.findViewById(R.id.no_se);
         enviar = (Button) view.findViewById(R.id.button);
         spinner = (Spinner) view.findViewById(R.id.spinner);
-        selected = (TextView)view.findViewById(R.id.selected);
+
+        //selected = (TextView)view.findViewById(R.id.selected);
+
 
         users = getResources().getStringArray(R.array.user);
 
-        ArrayAdapter<String> adapter;
+        ArrayAdapter<CharSequence> adapter;
 
-        adapter = new ArrayAdapter<String>(verticalFragment.this.getActivity(), android.R.layout.simple_spinner_item, users);
+        adapter = new ArrayAdapter<CharSequence>(verticalFragment.this.getActivity(), android.R.layout.simple_spinner_item, users);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
 
         spinner.setAdapter(adapter);
@@ -107,9 +110,11 @@ public class verticalFragment extends Fragment implements OnItemSelectedListener
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        //MenuInflater inflater = getActivity().getMenuInflater();
-        //super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.main, menu);
+        inflater = getActivity().getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+
+        //getActivity().getMenuInflater().inflate(R.menu.menu, menu);
     }
 
     @Override
@@ -118,8 +123,18 @@ public class verticalFragment extends Fragment implements OnItemSelectedListener
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+        switch (id){
+            case R.id.id_option1:
+                lanzarMenuOption1();
+                break;
+            case R.id.id_option2:
+                lanzarMenuOption2();
+                break;
+            case R.id.id_option3:
+                lanzarMenuOption3();
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -127,11 +142,12 @@ public class verticalFragment extends Fragment implements OnItemSelectedListener
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position,
                                long id) {
-        String user;
-        user = (String) parent.getItemAtPosition(position);
-        selected.setText(
-                this.getResources().getString(R.string.selected) + " " + Arrays.toString(users)
-        );
+        usuariopSelecctionado = parent.getItemAtPosition(position).toString();
+        //String user;
+        //user = (String) parent.getItemAtPosition(position);
+        //selected.setText(
+          //      this.getResources().getString(R.string.selected) + " " + usu
+        //);
 
     }
 
@@ -151,8 +167,25 @@ public class verticalFragment extends Fragment implements OnItemSelectedListener
         intent.putExtra("telefono", phone);
         intent.putExtra("correo", email);
         intent.putExtra("contrasena", pass);
+        intent.putExtra("spinner", this.usuariopSelecctionado);
+
         this.startActivity(intent);
     }
+    protected void lanzarMenuOption1() {
+        Intent intento;
+        intento = new Intent(verticalFragment.this.getActivity(), Main3Activity.class);
+        this.startActivity(intento);
+    }
 
+    protected void lanzarMenuOption2() {
+        Intent intento;
+        intento = new Intent(verticalFragment.this.getActivity(), Main4Activity.class);
+        this.startActivity(intento);
+    }
+    protected void lanzarMenuOption3() {
+        Intent intento;
+        intento = new Intent(verticalFragment.this.getActivity(), Main5Activity.class);
+        this.startActivity(intento);
+    }
 
 }
