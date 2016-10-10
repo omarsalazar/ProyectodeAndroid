@@ -4,15 +4,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.lopsan.tareita1.verticalFragment">
 
-    <TextView
-        android:id="@+id/text_name"
-        android:layout_width="95dp"
-        android:layout_height="43dp"
-        android:text="@string/name"
-        android:layout_above="@+id/text_address"
-        android:layout_alignLeft="@+id/text_address"
-        android:layout_alignStart="@+id/text_address"
-        android:layout_marginBottom="28dp" />
 
     <EditText
         android:id="@+id/edit_name"
@@ -67,16 +58,6 @@
         android:layout_alignStart="@+id/edit_address"
         android:inputType="number" />
 
-    <TextView
-        android:id="@+id/text_email"
-        android:layout_width="95dp"
-        android:layout_height="43dp"
-        android:text="@string/Email"
-        android:layout_gravity="left|center_vertical"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/edit_password"
-        android:layout_toStartOf="@+id/edit_password" />
-
     <EditText
         android:id="@+id/edit_email"
         android:layout_width="150dp"
@@ -97,17 +78,6 @@
         android:layout_alignStart="@+id/edit_name"
         android:inputType="textPassword" />
 
-    <TextView
-        android:id="@+id/text_password"
-        android:layout_width="95dp"
-        android:layout_height="43dp"
-        android:text="@string/Password"
-        android:layout_gravity="left|center_vertical"
-        android:layout_below="@+id/text_email"
-        android:layout_alignLeft="@+id/text_confirm"
-        android:layout_alignStart="@+id/text_confirm"
-        android:layout_marginTop="20dp" />
-
     <EditText
         android:id="@+id/edit_confirm"
         android:layout_width="150dp"
@@ -117,27 +87,6 @@
         android:layout_alignLeft="@+id/edit_phone"
         android:layout_alignStart="@+id/edit_phone"
         android:inputType="textPassword" />
-
-    <TextView
-        android:id="@+id/text_confirm"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="@string/confirm"
-        android:layout_gravity="left|center_vertical"
-        android:layout_below="@+id/text_password"
-        android:layout_toLeftOf="@+id/edit_password"
-        android:layout_toStartOf="@+id/edit_password"
-        android:layout_marginTop="15dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ok"
-        android:layout_marginTop="24dp"
-        android:id="@+id/button"
-        android:layout_below="@+id/text_confirm"
-        android:layout_toLeftOf="@+id/edit_confirm"
-        android:layout_toStartOf="@+id/edit_confirm" />
 
     <Button
         android:layout_width="wrap_content"
@@ -151,7 +100,78 @@
         android:onClick="borra"
         android:id="@+id/no_se"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/text_confirm"
+        android:layout_marginBottom="26dp" />
 
+    <TextView
+        android:id="@+id/text_confirm"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="@string/confirm"
+        android:layout_gravity="left|center_vertical"
+        android:layout_above="@+id/button"
+        android:layout_toStartOf="@+id/edit_password"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/text_password"
+        android:layout_width="95dp"
+        android:layout_height="43dp"
+        android:text="@string/Password"
+        android:layout_gravity="left|center_vertical"
+        android:layout_above="@+id/text_confirm"
+        android:layout_alignStart="@+id/text_confirm"
+        android:layout_marginBottom="13dp" />
+
+    <TextView
+        android:id="@+id/text_email"
+        android:layout_width="95dp"
+        android:layout_height="43dp"
+        android:text="@string/Email"
+        android:layout_gravity="left|center_vertical"
+        android:layout_above="@+id/edit_password"
+        android:layout_toStartOf="@+id/edit_password"
+        android:layout_marginBottom="13dp" />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="95dp"
+        android:layout_height="43dp"
+        android:text="@string/name"
+        android:layout_above="@+id/text_address"
+        android:layout_alignStart="@+id/text_address"
+        android:layout_marginBottom="14dp" />
+
+    <TextView
+        android:id="@+id/selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selected"
+        android:layout_above="@+id/edit_name"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select"
+        android:layout_alignTop="@+id/spinner"
+        android:layout_alignStart="@+id/text_name"
+        android:layout_alignBottom="@+id/spinner" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/selected"
+        android:layout_alignEnd="@+id/edit_name"
+        android:layout_toEndOf="@+id/select" />
 
 
 </RelativeLayout>
