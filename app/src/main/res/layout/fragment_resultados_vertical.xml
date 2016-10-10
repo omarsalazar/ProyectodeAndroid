@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lopsan.tareita1.ResultadosVertical">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="contrasena"
+        android:id="@+id/edit_password"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/edit_address"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="11dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="telefono"
+        android:id="@+id/edit_phone"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/edit_password"
+        android:layout_alignStart="@+id/edit_password" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="correo"
+        android:id="@+id/edit_email"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/edit_phone"
+        android:layout_alignStart="@+id/edit_phone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="direccion"
+        android:id="@+id/edit_address"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/edit_name"
+        android:layout_alignStart="@+id/edit_password" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nombre"
+        android:id="@+id/edit_name"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/edit_address" />
+
+</RelativeLayout>

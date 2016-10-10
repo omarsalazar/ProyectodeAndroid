@@ -1,0 +1,176 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lopsan.tareita1.horizontalFragment">
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="95dp"
+            android:layout_height="43dp"
+            android:text="@string/name"
+            android:layout_gravity="left|center_vertical"
+            android:layout_above="@+id/text_address"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            />
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_alignBaseline="@+id/text_name"
+            android:layout_alignBottom="@+id/text_name"
+            android:layout_toRightOf="@+id/text_name"
+            android:layout_toEndOf="@+id/text_name"
+            android:inputType="text" />
+
+
+        <TextView
+            android:id="@+id/text_address"
+            android:layout_width="95dp"
+            android:layout_height="43dp"
+            android:text="@string/Address"
+            android:layout_gravity="left|center_vertical"
+            android:layout_above="@+id/text_phone"
+            android:layout_toLeftOf="@+id/edit_address"
+            android:layout_toStartOf="@+id/edit_address" />
+
+        <EditText
+            android:id="@+id/edit_address"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_alignTop="@+id/text_address"
+            android:layout_toRightOf="@+id/text_name"
+            android:layout_toEndOf="@+id/text_name"
+            android:inputType="text" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/text_phone"
+            android:layout_width="95dp"
+            android:layout_height="43dp"
+            android:text="@string/Phone"
+            android:layout_gravity="left|center_vertical"
+            android:layout_above="@+id/text_email"
+            android:layout_toLeftOf="@+id/edit_email"
+            android:layout_toStartOf="@+id/edit_email" />
+
+        <EditText
+            android:id="@+id/edit_phone"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_alignBaseline="@+id/text_phone"
+            android:layout_alignBottom="@+id/text_phone"
+            android:layout_alignLeft="@+id/edit_address"
+            android:layout_alignStart="@+id/edit_address"
+            android:inputType="number" />
+
+
+        <TextView
+            android:id="@+id/text_email"
+            android:layout_width="95dp"
+            android:layout_height="43dp"
+            android:text="@string/Email"
+            android:layout_gravity="left|center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/edit_password"
+            android:layout_toStartOf="@+id/edit_password" />
+
+        <EditText
+            android:id="@+id/edit_email"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_below="@+id/text_phone"
+            android:layout_alignLeft="@+id/edit_phone"
+            android:layout_alignStart="@+id/edit_phone"
+            android:inputType="textEmailAddress" />
+
+    </TableRow>
+
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/text_password"
+            android:layout_width="95dp"
+            android:layout_height="43dp"
+            android:text="@string/Password"
+            android:layout_gravity="left|center_vertical"
+            android:layout_below="@+id/text_email"
+            android:layout_alignLeft="@+id/text_confirm"
+            android:layout_alignStart="@+id/text_confirm"
+            android:layout_marginTop="20dp" />
+
+
+        <EditText
+            android:id="@+id/edit_password"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_alignTop="@+id/text_password"
+            android:layout_alignLeft="@+id/edit_name"
+            android:layout_alignStart="@+id/edit_name"
+            android:inputType="textPassword" />
+
+
+        <TextView
+            android:id="@+id/text_confirm"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="@string/confirm"
+            android:layout_gravity="left|center_vertical"
+            android:layout_below="@+id/text_password"
+            android:layout_toLeftOf="@+id/edit_password"
+            android:layout_toStartOf="@+id/edit_password"
+            android:layout_marginTop="15dp" />
+
+        <EditText
+            android:id="@+id/edit_confirm"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_alignBottom="@+id/text_confirm"
+            android:layout_alignLeft="@+id/edit_phone"
+            android:layout_alignStart="@+id/edit_phone"
+            android:inputType="textPassword" />
+
+
+
+
+    </TableRow>
+
+
+    <TableRow>
+        <Button
+            android:text="@string/ok"
+            android:layout_marginTop="24dp"
+            android:id="@+id/button"
+            android:layout_below="@+id/text_confirm"
+            android:layout_toLeftOf="@+id/edit_confirm"
+            android:layout_toStartOf="@+id/edit_confirm"
+            android:layout_column="1" />
+
+        <Button
+            android:text="@string/clear"
+            android:layout_marginTop="24dp"
+            android:layout_alignTop="@+id/button"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/no_se"
+            android:layout_column="3"
+            android:onClick="Borrar" />
+
+    </TableRow>
+
+
+</TableLayout>
